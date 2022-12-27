@@ -10,6 +10,7 @@ module.exports = {
     path: path.join(__dirname, "../dist"), // 打包结果输出路径
     clean: true, // webpack4需要配置clean-webpack-plugin来删除dist文件,webpack5内置了
     publicPath: "/", // 打包后文件的公共前缀路径
+    
   },
   module: {
     rules: [
@@ -34,7 +35,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.tsx', '.ts'],
+    alias:{
+      "@":path.join(__dirname,"../src"),
+      "@public":path.join(__dirname,"../public"),
+      "@pages":path.join(__dirname,"../src/pages")
+    },
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html'), // 模板取定义root节点的模板

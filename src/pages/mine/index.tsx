@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { PhoneFilled, MailFilled } from "@ant-design/icons";
 import { Tag } from "antd"
-import userInfo from "@public/luopeng";
+import userInfo from "@/data/luopeng";
 import './index.less'
 
 
 const Mine = () => {
-    const { name, sex, birth, job, tel, email, school, major, skills, experience } = userInfo
+    const { name, sex, birth, job, tel, email, school,years,statusLabel, skills, experience } = userInfo
 
     const call = (tel: string) => {
         window.location.href = `tel:${tel}`
@@ -22,7 +22,7 @@ const Mine = () => {
             {/* 基础信息 */}
             <div className="userinfo">
                 <div className="name">{name}</div>
-                <div className="reference">{sex}/{birth}/{job}</div>
+                <div className="reference">{sex}/{birth}/{job}/{years}年/{statusLabel}</div>
                 <div className="info marginTop10">
                     <div className="tel" onClick={() => call(tel)}><PhoneFilled className="green" />{tel}</div>
                     <div className="email green" onClick={() => mailTo(email)}><MailFilled />{email}</div>

@@ -3,6 +3,8 @@ const user = {
     birth:"1995",
     sex:"男",
     job:"前端开发",
+    years:5,
+    statusLabel:"在职-考虑机会",
     tel:"18582484767",
     email:"18582484767@163.com",
     school:{
@@ -16,7 +18,8 @@ const user = {
         "精通React开发框架、React Hook和React全家桶,擅长使用React Hook",
         "熟练掌握webpack自动化构建工具,使用过vite等自动化构建工具",
         "熟练掌握node,熟悉next和express等node框架",
-        "熟悉小程序开发流程,熟悉Taro等react在小程序端的解决方案"
+        "熟悉小程序开发流程,熟悉Taro等react在小程序端的解决方案",
+        "其他:使用过Vue和Angular开发项目,熟练掌握git项目管理"
     ],
     experience:[
         {

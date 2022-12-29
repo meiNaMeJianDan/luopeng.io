@@ -1,5 +1,5 @@
 const user = {
-    name:"徐富康",
+    name:"罗鹏",
     birth:"1995",
     sex:"男",
     job:"前端开发",
